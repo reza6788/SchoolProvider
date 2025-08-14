@@ -1,0 +1,28 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5071",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MongoDb_ConnectionString":"mongodb://admin:secret@localhost:27017/?authSource=SchoolProvider",
+        "MongoDb_DatabaseName":"SchoolProvider"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7232;http://localhost:5071",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MongoDb_ConnectionString":"mongodb://admin:secret@localhost:27017/?authSource=admin",
+        "MongoDb_DatabaseName":"SchoolProvider"
+        
+      }
+    }
+  }
+}
