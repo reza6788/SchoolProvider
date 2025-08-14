@@ -5044,11 +5044,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
+      "projectUniqueName": "C:\\Reza\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
       "projectName": "SchoolProvider.Business",
-      "projectPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
+      "projectPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
       "packagesPath": "C:\\Users\\rho\\.nuget\\packages\\",
-      "outputPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Business\\obj\\",
+      "outputPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
@@ -5072,11 +5072,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj": {
-              "projectPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj"
+            "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj": {
+              "projectPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj"
             },
-            "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {
-              "projectPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj"
+            "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {
+              "projectPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj"
             }
           }
         }

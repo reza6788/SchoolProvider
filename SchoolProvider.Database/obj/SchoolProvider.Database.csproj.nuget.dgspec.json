@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {}
+    "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {}
   },
   "projects": {
-    "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {
+    "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
+        "projectUniqueName": "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
         "projectName": "SchoolProvider.Database",
-        "projectPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
+        "projectPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
         "packagesPath": "C:\\Users\\rho\\.nuget\\packages\\",
-        "outputPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\obj\\",
+        "outputPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",

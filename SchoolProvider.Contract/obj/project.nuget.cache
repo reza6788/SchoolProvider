@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1m7gBSCU8Jk=",
+  "dgSpecHash": "sMkUXDx9ZMU=",
   "success": true,
-  "projectFilePath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
+  "projectFilePath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",

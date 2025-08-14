@@ -4170,11 +4170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
+      "projectUniqueName": "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
       "projectName": "SchoolProvider.Contract",
-      "projectPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
+      "projectPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\SchoolProvider.Contract.csproj",
       "packagesPath": "C:\\Users\\rho\\.nuget\\packages\\",
-      "outputPath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Contract\\obj\\",
+      "outputPath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Contract\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",

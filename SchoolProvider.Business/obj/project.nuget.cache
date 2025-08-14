@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gUiwdzUpwlM=",
+  "dgSpecHash": "F2sYAW65/Ms=",
   "success": true,
-  "projectFilePath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
+  "projectFilePath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Business\\SchoolProvider.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rho\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

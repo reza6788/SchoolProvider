@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pZxTuqzw5Hw=",
+  "dgSpecHash": "l6rCqoIeZW4=",
   "success": true,
-  "projectFilePath": "C:\\Reza\\CQRS+UnitOfWork\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
+  "projectFilePath": "C:\\Reza\\SchoolProvider\\SchoolProvider.Database\\SchoolProvider.Database.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rho\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
