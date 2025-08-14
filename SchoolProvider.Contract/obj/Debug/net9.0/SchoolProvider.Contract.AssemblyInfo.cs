@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolProvider.Contract")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e941be586d3e29377766ea41b5a832ef8ca6fa7a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+995b56a5ea4012b91475c439e2160c89c4b4272d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolProvider.Contract")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolProvider.Contract")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
