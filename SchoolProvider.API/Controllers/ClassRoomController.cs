@@ -19,36 +19,31 @@ public class ClassRoomController : Controller
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResultModel<List<ClassRoomDto>>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll()
+    public async Task<ActionResult<ResultModel<List<ClassRoomDto>>>> GetAll()
     {
         return await _mediator.Send(new GetAllClassRoomQuery());
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResultModel<ClassRoomDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetById(string classRoomId)
+    public async Task<ActionResult<ResultModel<ClassRoomDto>>> GetById(string classRoomId)
     {
         return await _mediator.Send(new GetClassRoomByIdQuery(classRoomId));
     }
 
     [HttpPost]
-    [ProducesResponseType(typeof(ResultModel<ClassRoomDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Create(ClassRoomCreateDto classRoom)
+    public async Task<ActionResult<ResultModel<ClassRoomDto>>> Create(ClassRoomCreateDto classRoom)
     {
         return await _mediator.Send(new CreateClassRoomCommand(classRoom));
     }
 
     [HttpPut]
-    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Update(ClassRoomUpdateDto classRoom)
+    public async Task<ActionResult<ResultModel<bool>>> Update(ClassRoomUpdateDto classRoom)
     {
         return await _mediator.Send(new UpdateClassRoomCommand(classRoom));
     }
 
     [HttpDelete]
-    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Delete(string id)
+    public async Task<ActionResult<ResultModel<bool>>> Delete(string id)
     {
         return await _mediator.Send(new DeleteClassRoomCommand(id));
     }

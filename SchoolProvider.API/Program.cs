@@ -35,6 +35,8 @@ builder.Services.AddScoped<IMongoDbContext, MongoDbContext>();
 builder.Services.AddMediatR(cfg => 
     cfg.RegisterServicesFromAssembly(typeof(CreateStudentCommandHandler).Assembly));
 
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();

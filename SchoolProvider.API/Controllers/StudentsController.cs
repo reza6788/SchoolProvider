@@ -20,37 +20,32 @@ public class StudentsController : ControllerBase
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResultModel<List<StudentDto>>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAll()
+    public async Task<ActionResult<ResultModel<List<StudentDto>>>> GetAll()
     {
         var result = await _mediator.Send(new GetAllStudentsQuery());
         return Ok(result);
     }
 
     [HttpGet]
-    [ProducesResponseType(typeof(ResultModel<StudentDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetById(string studentId)
+    public async Task<ActionResult<ResultModel<StudentDto>>> GetById(string studentId)
     {
         return await _mediator.Send(new GetStudentByIdQuery(studentId));
     }
 
     [HttpPost]
-    [ProducesResponseType(typeof(ResultModel<StudentDto>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Create(StudentCreateDto student)
+    public async Task<ActionResult<ResultModel<StudentDto>>> Create(StudentCreateDto student)
     {
         return await _mediator.Send(new CreateStudentCommand(student));
     }
 
     [HttpPut]
-    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Update(StudentUpdateDto student)
+    public async Task<ActionResult<ResultModel<bool>>> Update(StudentUpdateDto student)
     {
         return await _mediator.Send(new UpdateStudentCommand(student));
     }
 
     [HttpDelete]
-    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Delete(string id)
+    public async Task<ActionResult<ResultModel<bool>>> Delete(string id)
     {
         return await _mediator.Send(new DeleteStudentCommand(id));
     }
