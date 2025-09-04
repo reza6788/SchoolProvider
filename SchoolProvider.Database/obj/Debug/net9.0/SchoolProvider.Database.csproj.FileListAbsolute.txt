@@ -22,3 +22,4 @@ C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.Database\obj\Debug\net9.0\
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.Database\obj\Debug\net9.0\refint\SchoolProvider.Database.dll
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.Database\obj\Debug\net9.0\SchoolProvider.Database.pdb
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.Database\obj\Debug\net9.0\ref\SchoolProvider.Database.dll
+C:\Reza\SchoolProvider\SchoolProvider.Database\obj\Debug\net9.0\SchoolProvider.Database.sourcelink.json

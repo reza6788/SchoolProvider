@@ -109,3 +109,7 @@ C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.API\obj\Debug\net9.0\refin
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.API\obj\Debug\net9.0\SchoolProvider.API.pdb
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.API\obj\Debug\net9.0\SchoolProvider.API.genruntimeconfig.cache
 C:\Reza\CQRS+UnitOfWork\SchoolProvider\SchoolProvider.API\obj\Debug\net9.0\ref\SchoolProvider.API.dll
+C:\Reza\SchoolProvider\SchoolProvider.API\bin\Debug\net9.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Reza\SchoolProvider\SchoolProvider.API\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Reza\SchoolProvider\SchoolProvider.API\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Reza\SchoolProvider\SchoolProvider.API\obj\Debug\net9.0\SchoolProvider.API.sourcelink.json

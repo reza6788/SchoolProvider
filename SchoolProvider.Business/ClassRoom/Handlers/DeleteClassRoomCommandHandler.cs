@@ -23,4 +23,5 @@ public class DeleteClassRoomCommandHandler : IRequestHandler<DeleteClassRoomComm
         await _unitOfWork.ClassRooms.DeleteAsync(request.ClassRoomId, classRoom);
         return true.AsSuccess("Class room deleted");
     }
+    
 }

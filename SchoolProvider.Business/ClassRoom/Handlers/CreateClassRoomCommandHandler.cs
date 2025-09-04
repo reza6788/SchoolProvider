@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Net;
+using AutoMapper;
 using MediatR;
 using SchoolProvider.Business.ClassRoom.Commands;
 using SchoolProvider.Contract.Common;
@@ -21,6 +22,10 @@ public class CreateClassRoomCommandHandler : IRequestHandler<CreateClassRoomComm
 
     public async Task<ResultModel<ClassRoomDto>> Handle(CreateClassRoomCommand request, CancellationToken cancellationToken)
     {
+        var newClassRoom = new ClassRoomDto();
+        var isClassRoomNameExist = await IsClassRoomNameExist(request.ClassRoom.Name);
+        if(isClassRoomNameExist) return newClassRoom.AsWarning("Class room name already exist");
+        
         var classRoom = new ClassRoomEntity
         {
             Name = request.ClassRoom.Name,
@@ -28,7 +33,13 @@ public class CreateClassRoomCommandHandler : IRequestHandler<CreateClassRoomComm
         };
 
         var newClassRoomEntity=await _unitOfWork.ClassRooms.AddAsync(classRoom);
-        var newClassRoom=_mapper.Map<ClassRoomDto>(newClassRoomEntity);
+        newClassRoom=_mapper.Map<ClassRoomDto>(newClassRoomEntity);
         return newClassRoom.AsSuccess("Class room created");
+    }
+
+    private async Task<bool> IsClassRoomNameExist(string name)
+    {
+        var classRoom = await _unitOfWork.ClassRooms.GetByFilterAsync(p => !p.IsDeleted && p.Name == name);
+        return classRoom.Any();
     }
 }
