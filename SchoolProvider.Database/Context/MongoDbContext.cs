@@ -6,14 +6,15 @@ namespace SchoolProvider.Database.Context;
 public class MongoDbContext : IMongoDbContext
 {
     private readonly IMongoDatabase _database;
-
+    public string ConnectionString { get;}
+    public string DatabaseName { get;}
     public MongoDbContext(IConfiguration configuration)
     {
-        var connectionString = configuration["MongoDb_ConnectionString"];
-        var dbName = configuration["MongoDb_DatabaseName"];
+        ConnectionString = configuration["MongoDb_ConnectionString"];
+        DatabaseName = configuration["MongoDb_DatabaseName"];
 
-        var client = new MongoClient(connectionString);
-        _database = client.GetDatabase(dbName);
+        var client = new MongoClient(ConnectionString);
+        _database = client.GetDatabase(DatabaseName);
     }
 
     public IMongoCollection<T> GetCollection<T>(string name) => _database.GetCollection<T>(name);

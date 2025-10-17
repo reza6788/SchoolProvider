@@ -59,7 +59,11 @@
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[3.4.2, )"
+              "version": "[2.14.1, )"
+            },
+            "MongoDBMigrations": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

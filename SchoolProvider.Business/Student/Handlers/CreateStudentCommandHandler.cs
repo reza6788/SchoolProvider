@@ -25,6 +25,8 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
         {
             FullName = request.Student.FullName,
             DateOfBirth = request.Student.DateOfBirth,
+            Age = request.Student.Age,
+            PhoneNumber = request.Student.PhoneNumber,
             Courses = request.Student.Courses,
         };
 

@@ -22,6 +22,8 @@ public class UpdateStudentCommandHandler : IRequestHandler<UpdateStudentCommand,
         if (existing == null) return false.AsWarning("Student not found", HttpStatusCode.NotFound);
         existing.FullName = request.Student.FullName;
         existing.DateOfBirth = request.Student.DateOfBirth;
+        existing.Age = request.Student.Age;
+        existing.PhoneNumber = request.Student.PhoneNumber;
         existing.Courses = request.Student.Courses;
 
         await _unitOfWork.Students.UpdateAsync(request.Student.Id, existing);

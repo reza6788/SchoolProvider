@@ -20,7 +20,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "MongoDb_ConnectionString":"mongodb://softpark:softpark@localhost:27017/",
-        "MongoDb_DatabaseName":"SchoolProvider"
+        "MongoDb_DatabaseName":"School2"
         
       }
     }
