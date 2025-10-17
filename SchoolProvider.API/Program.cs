@@ -1,8 +1,12 @@
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 using SchoolProvider.Business.Mapping;
 using SchoolProvider.Business.Student.Handlers;
 using SchoolProvider.Database.Context;
 using SchoolProvider.Database.UnitOfWork;
+using SchoolProvider.Database.Entities;
+using SchoolProvider.Database.MigrationHelpers;
+using SchoolProvider.Database.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,10 +36,13 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IMongoDbContext, MongoDbContext>();
 
 // MediatR
-builder.Services.AddMediatR(cfg => 
+builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(CreateStudentCommandHandler).Assembly));
 
 builder.Services.AddHealthChecks();
+
+// Database migration
+await MongoMigrationRunner.RunMigrationsAsync(builder.Configuration);
 
 var app = builder.Build();
 
@@ -51,10 +58,10 @@ app.UseSwaggerUI(options =>
 app.MapControllers();
 
 app.MapGet("/",
-        context =>
-        {
-            context.Response.Redirect("/swagger");
-            return Task.CompletedTask;
-        }).AllowAnonymous();
+    context =>
+    {
+        context.Response.Redirect("/swagger");
+        return Task.CompletedTask;
+    }).AllowAnonymous();
 
 app.Run();

@@ -1034,7 +1034,7 @@
           }
         }
       },
-      "MongoDB.Bson/3.4.2": {
+      "MongoDB.Bson/3.5.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1051,12 +1051,12 @@
           }
         }
       },
-      "MongoDB.Driver/3.4.2": {
+      "MongoDB.Driver/3.5.0": {
         "type": "package",
         "dependencies": {
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "3.4.2",
+          "MongoDB.Bson": "3.5.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -1769,7 +1769,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "9.0.8",
-          "MongoDB.Driver": "3.4.2"
+          "MongoDB.Driver": "3.5.0"
         },
         "compile": {
           "bin/placeholder/SchoolProvider.Database.dll": {}
@@ -3078,10 +3078,10 @@
         "version.txt"
       ]
     },
-    "MongoDB.Bson/3.4.2": {
-      "sha512": "FubVWPnefWjGa3aE0U/b3fn0p9S1KPIZwLAA4PguwYHNybzesaEPglscpY9YGVN72ggGeig1e88G9D5jCnY70w==",
+    "MongoDB.Bson/3.5.0": {
+      "sha512": "JGNK6BanLDEifgkvPLqVFCPus5EDCy416pxf1dxUBRSVd3D9+NB3AvMVX190eXlk5/UXuCxpsQv7jWfNKvppBQ==",
       "type": "package",
-      "path": "mongodb.bson/3.4.2",
+      "path": "mongodb.bson/3.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3092,15 +3092,15 @@
         "lib/net6.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.3.4.2.nupkg.sha512",
+        "mongodb.bson.3.5.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/3.4.2": {
-      "sha512": "uB2VlLZO4kGvn499Xbdtu/BfAX6wMqpXlWhDonPGGzyCD+Cho+g0M5XIBjPh/8EFrWmBMKvRamW+AWFjgxx+pw==",
+    "MongoDB.Driver/3.5.0": {
+      "sha512": "ST90u7psyMkNNOWFgSkexsrB3kPn7Ynl2DlMFj2rJyYuc6SIxjmzu4ufy51yzM+cPVE1SvVcdb5UFobrRw6cMg==",
       "type": "package",
-      "path": "mongodb.driver/3.4.2",
+      "path": "mongodb.driver/3.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3111,7 +3111,7 @@
         "lib/net6.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.3.4.2.nupkg.sha512",
+        "mongodb.driver.3.5.0.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]

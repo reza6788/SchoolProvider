@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aQkwiEBB2uE=",
+  "dgSpecHash": "NgbQQqKTtTo=",
   "success": true,
   "projectFilePath": "C:\\Reza\\SchoolProvider\\SchoolProvider.API\\SchoolProvider.API.csproj",
   "expectedPackageFiles": [
@@ -50,8 +50,8 @@
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
-    "C:\\Users\\rho\\.nuget\\packages\\mongodb.bson\\3.4.2\\mongodb.bson.3.4.2.nupkg.sha512",
-    "C:\\Users\\rho\\.nuget\\packages\\mongodb.driver\\3.4.2\\mongodb.driver.3.4.2.nupkg.sha512",
+    "C:\\Users\\rho\\.nuget\\packages\\mongodb.bson\\3.5.0\\mongodb.bson.3.5.0.nupkg.sha512",
+    "C:\\Users\\rho\\.nuget\\packages\\mongodb.driver\\3.5.0\\mongodb.driver.3.5.0.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\rho\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SchoolProvider.Contract.DTOs.ClassRoom;
 using SchoolProvider.Contract.DTOs.Student;
+using SchoolProvider.Contract.DTOs.Teacher;
 using SchoolProvider.Database.Entities;
 
 namespace SchoolProvider.Business.Mapping;
@@ -11,5 +12,6 @@ public class MappingProfile :Profile
     {
         CreateMap<StudentEntity, StudentDto>();
         CreateMap<ClassRoomEntity, ClassRoomDto>();
+        CreateMap<TeacherEntity, TeacherDto>();
     }
 }

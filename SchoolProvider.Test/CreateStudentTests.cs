@@ -14,9 +14,9 @@ public class CreateStudentTests
     // public async Task Should_Create_Student_Successfully()
     // {
     //     // Arrange
-    //     var command = new CreateStudentCommand("John", DateTime.Now,["Math","Physic"] );
+    //     var command = new CreateTeacherCommand("John", DateTime.Now,["Math","Physic"] );
     //
-    //     var handler = new CreateStudentCommandHandler(UnitOfWorkMock.Students);
+    //     var handler = new CreateTeacherCommandHandler(UnitOfWorkMock.Students);
     //
     //     // Act
     //     var result = await handler.Handle(command, CancellationToken.None);

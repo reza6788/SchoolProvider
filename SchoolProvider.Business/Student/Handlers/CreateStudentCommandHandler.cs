@@ -13,7 +13,7 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
-    public CreateStudentCommandHandler(IUnitOfWork unitOfWork,IMapper mapper)
+    public CreateStudentCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
@@ -24,12 +24,14 @@ public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand,
         var student = new StudentEntity
         {
             FullName = request.Student.FullName,
+            AgeInYears = request.Student.AgeInYears,
             DateOfBirth = request.Student.DateOfBirth,
+            Email = request.Student.Email,
             Courses = request.Student.Courses,
         };
 
-        var newStudentEntity =await _unitOfWork.Students.AddAsync(student);
-        var newStudent=_mapper.Map<StudentDto>(newStudentEntity);
+        var newStudentEntity = await _unitOfWork.Students.AddAsync(student);
+        var newStudent = _mapper.Map<StudentDto>(newStudentEntity);
         return newStudent.AsSuccess("student created");
     }
 }
