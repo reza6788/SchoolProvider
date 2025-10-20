@@ -63,7 +63,7 @@ foreach (var entityType in entityTypes)
 // await generator.GenerateForEntityAsync<StudentEntity>("0.0.4", migrationsPath);
 
 // Or apply all migrations
-var runner = new MongoMigrationRunner(db);
-await runner.RunMigrationsAsync();
+// var runner = new MongoMigrationRunner(db);
+// await runner.RunMigrationsAsync();
 
 Console.WriteLine("✅ Migrations complete.");
