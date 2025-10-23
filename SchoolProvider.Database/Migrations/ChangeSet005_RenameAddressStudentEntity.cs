@@ -5,28 +5,22 @@ using Version = MongoDBMigrations.Version;
 
 namespace SchoolProvider.Database.Migrations;
 
-
-public class ChangeSet002_AddAgePhoneStudentEntity : IMigration
+public class ChangeSet005_RenameAddressStudentEntity :IMigration
 {
-    public Version Version => new(0, 0, 2);
-    public string Name => "Add Age and Phone to Student Entity";
+    public Version Version => new(0, 0, 5);
+    public string Name => "Rename Address in Student Entity";
     
     public void Up(IMongoDatabase database)
     {
         var collectionName = "StudentEntity";
         var collection = database.GetCollection<BsonDocument>(collectionName);
 
-        var filter = Builders<BsonDocument>.Filter.Or(
-            Builders<BsonDocument>.Filter.Exists("Age", false),
-            Builders<BsonDocument>.Filter.Exists("PhoneNumber", false)
-        );
-
-        var update = Builders<BsonDocument>.Update
-            .Set("Age", 0)
-            .Set("PhoneNumber", "");
+        // Rename the field "address" -> "Address" for all documents that have it
+        var filter = Builders<BsonDocument>.Filter.Exists("Address");
+        var update = Builders<BsonDocument>.Update.Rename("Address", "Address Home");
 
         var result = collection.UpdateMany(filter, update);
-        Console.WriteLine($"Updated {result.ModifiedCount} student documents.");
+        Console.WriteLine($"[UP] Updated {result.ModifiedCount} documents (Address -> Address Home).");
     }
 
     public void Down(IMongoDatabase database)
@@ -35,8 +29,7 @@ public class ChangeSet002_AddAgePhoneStudentEntity : IMigration
         var collection = database.GetCollection<BsonDocument>(collectionName);
 
         var update = Builders<BsonDocument>.Update
-            .Unset("Age")
-            .Unset("PhoneNumber");
+            .Unset("Address");
 
         collection.UpdateMany(FilterDefinition<BsonDocument>.Empty, update);
     }

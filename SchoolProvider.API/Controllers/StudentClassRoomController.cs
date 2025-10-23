@@ -20,21 +20,24 @@ public class StudentClassRoomController : Controller
 
     [HttpGet]
     
-    public async Task<ActionResult<ResultModel<ClassRoomWithStudentsDto>>> GetStudentsByClassroomId(string classRoomId)
+    [ProducesResponseType(typeof(ResultModel<ClassRoomWithStudentsDto>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetStudentsByClassroomId(string classRoomId)
     {
         var result = await _mediator.Send(new GetStudentsByClassRoomIdQuery(classRoomId));
         return result != null ? Ok(result) : NotFound();
     }
     
     [HttpPost]
-    public async Task<ActionResult<ResultModel<bool>>> InsertStudentInClassRoom(string classRoomId, string studentId)
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> InsertStudentInClassRoom(string classRoomId, string studentId)
     {
         var result = await _mediator.Send(new InsertStudentInClassRoomCommand(classRoomId,studentId));
         return Ok(result);
     }
     
     [HttpPut]
-    public async Task<ActionResult<ResultModel<bool>>> InsertStudentInClassRoom(string firstClassRoomId, 
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> InsertStudentInClassRoom(string firstClassRoomId, 
         string secondClassRoomId, string studentId)
     {
         var result = await _mediator.Send(new MoveStudentToAnotherClassRoomCommand(firstClassRoomId,secondClassRoomId,studentId));
@@ -42,7 +45,8 @@ public class StudentClassRoomController : Controller
     }
     
     [HttpDelete]
-    public async Task<ActionResult<ResultModel<bool>>> RemoveStudentFromClassRoom(string classRoomId, string studentId)
+    [ProducesResponseType(typeof(ResultModel<bool>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> RemoveStudentFromClassRoom(string classRoomId, string studentId)
     {
         var result = await _mediator.Send(new RemoveStudentFromClassRoomCommand(classRoomId,studentId));
         return Ok(result);

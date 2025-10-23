@@ -5,11 +5,10 @@ using Version = MongoDBMigrations.Version;
 
 namespace SchoolProvider.Database.Migrations;
 
-
-public class ChangeSet002_AddAgePhoneStudentEntity : IMigration
+public class ChangeSet002_AddAddressStudentEntity :IMigration
 {
-    public Version Version => new(0, 0, 2);
-    public string Name => "Add Age and Phone to Student Entity";
+    public Version Version => new(0, 0, 4);
+    public string Name => "Add Address to Student Entity";
     
     public void Up(IMongoDatabase database)
     {
@@ -17,13 +16,11 @@ public class ChangeSet002_AddAgePhoneStudentEntity : IMigration
         var collection = database.GetCollection<BsonDocument>(collectionName);
 
         var filter = Builders<BsonDocument>.Filter.Or(
-            Builders<BsonDocument>.Filter.Exists("Age", false),
-            Builders<BsonDocument>.Filter.Exists("PhoneNumber", false)
+            Builders<BsonDocument>.Filter.Exists("Address", false)
         );
 
         var update = Builders<BsonDocument>.Update
-            .Set("Age", 0)
-            .Set("PhoneNumber", "");
+            .Set("Address", 0);
 
         var result = collection.UpdateMany(filter, update);
         Console.WriteLine($"Updated {result.ModifiedCount} student documents.");
@@ -35,8 +32,7 @@ public class ChangeSet002_AddAgePhoneStudentEntity : IMigration
         var collection = database.GetCollection<BsonDocument>(collectionName);
 
         var update = Builders<BsonDocument>.Update
-            .Unset("Age")
-            .Unset("PhoneNumber");
+            .Unset("Address");
 
         collection.UpdateMany(FilterDefinition<BsonDocument>.Empty, update);
     }
