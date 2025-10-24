@@ -1,14 +1,20 @@
-﻿using MongoDB.Driver;
-using MongoDBMigrations;
-using SchoolProvider.Database.Context;
+﻿using Kot.MongoDB.Migrations;
+using Microsoft.Extensions.Logging;
+using MongoDB.Driver;
 using SchoolProvider.Database.Migrations;
 
 
-var client = new MongoClient("mongodb://softpark:softpark@localhost:27017");
-var runner = new MigrationEngine()
-    .UseDatabase(client,"School2")
-    .UseAssembly(typeof(MongoDbContext).Assembly)
-    .UseSchemeValidation(false);
 
-runner.Run();
+var options = new MigrationOptions("School3");
 
+using var loggerFactory = LoggerFactory.Create(builder =>
+{
+    builder.SetMinimumLevel(LogLevel.Debug);
+});
+
+var migrator = MigratorBuilder.FromConnectionString("mongodb://softpark:softpark@localhost:27017", options)
+        .LoadMigrationsFromAssembly(typeof(CS001_InsertTeacherEntity).Assembly)
+        .WithLogger(loggerFactory) 
+    .Build();
+
+MigrationResult result = await migrator.MigrateAsync();

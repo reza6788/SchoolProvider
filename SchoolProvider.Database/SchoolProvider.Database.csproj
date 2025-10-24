@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Kot.MongoDB.Migrations.DI" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
     <PackageReference Include="MongoDB.Driver" Version="3.5.0" />
   </ItemGroup>
