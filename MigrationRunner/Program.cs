@@ -1,6 +1,5 @@
 ﻿using Kot.MongoDB.Migrations;
 using Microsoft.Extensions.Logging;
-using MongoDB.Driver;
 using SchoolProvider.Database.Migrations;
 
 
@@ -9,7 +8,9 @@ var options = new MigrationOptions("School3");
 
 using var loggerFactory = LoggerFactory.Create(builder =>
 {
-    builder.SetMinimumLevel(LogLevel.Debug);
+    builder
+        .AddConsole()
+        .SetMinimumLevel(LogLevel.Debug);
 });
 
 var migrator = MigratorBuilder.FromConnectionString("mongodb://softpark:softpark@localhost:27017", options)
@@ -18,3 +19,5 @@ var migrator = MigratorBuilder.FromConnectionString("mongodb://softpark:softpark
     .Build();
 
 MigrationResult result = await migrator.MigrateAsync();
+
+var aa=result;
